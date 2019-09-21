@@ -1,0 +1,20 @@
+answer = input("Do you want to go on an adventure? yes or no? ")
+Wisedom = 9
+if answer == "yes":
+  print("Ok")
+  Nam = input("Choose a name, Choose Wisely as it can't be changed later ")
+  if Nam == "Wisely":
+    Wisedom = 10
+    print("Good choice")
+  elif Nam == "changed later":
+    input("It can't be changed later, choose another name ")
+    Wisedom = 8
+    if Nam = "another name":
+        Wisedom = 7
+        print("FIne, be like that")
+    elif Nam == "unavailable":
+        
+
+
+
+else:
