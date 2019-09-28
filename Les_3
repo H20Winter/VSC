@@ -1,0 +1,43 @@
+
+# Level 1
+
+TumTumRum = input("Are you hungry? ")
+if (TumTumRum == "yes"):
+    print("Then let's consume foob.")
+if TumTumRum == "no":
+    print("But the foob.")
+
+# Level 2
+
+Fridge = input("Is it cold outside? ")
+Powder = input("Is it snowing outside? ")
+
+if (Fridge and Powder == "yes"):
+    print("Put on a coat and a hat or hood and boots. We don't want to get a cold going out now.")
+elif (Fridge == "yes"):
+    print("Put on a coat going out.")
+elif (Powder == "yes"):
+    print("Put on a hat and boots going out.")
+else:
+    print("Ok. dress for the weather.")
+
+# Level 3
+
+# Ask the user for their first and last name
+# If the user's first name comes before their last name
+#   in the alphabet, print "first", otherwise "long"
+# If the length of the first name is greater, print "long first",
+#   if the last name is longer, print "long last", otherwise print "equal"
+
+
+fir = input("First name: ")
+las = input("Last name: ")
+
+
+
+if len(fir) > len(las):
+    print("longer first nam")
+elif len(las) > len(fir):
+    print("longer last nam")
+else:
+    print("Nams equal")
