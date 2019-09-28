@@ -1,0 +1,11 @@
+Age = int(input("What's your age? "))
+Year = int(input("What's the year? "))
+
+Centel = (Year + 100)
+Centennial = (100 - Age)
+
+if (Age < 100):
+    print("So in", Centennial, "years, or in", Centel, "you'd be 100 years old")
+elif(Age > 125):
+    print("Liar, you'd be very much dead at that age.")
+else:
