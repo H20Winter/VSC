@@ -1,0 +1,7 @@
+#Guessing game
+
+print("Number guessing game")
+max = int(input("pick a number above 0 (higher numbers make it harder) "))
+i = 
+while(geuss != i):
+geuss = int(input("Guess a number"))
