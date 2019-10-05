@@ -1,0 +1,19 @@
+# Ans = input("You want ice cream? ")
+# while(Ans == "no"):
+#     ing = input("Are you sure you don't want some? ")
+#     if(ing == "no"):
+#         print("too bad. I don't have any")
+#         break
+# if(Ans == "yes"):
+#     print("Too bad. I don't have any")
+
+# i = 0
+# num = int(input("Pick a number above 0: "))
+# while (i <= num):
+#     if (i%2 == 0):
+#         print(i)
+#     i += 1
+
+i = 0
+num = int(input("Pick a number above 0: "))
+while(i <= num):
