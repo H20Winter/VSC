@@ -1,0 +1,16 @@
+def Cipher(Secret,Shift):
+    Final = ""
+    for i in range(len(Secret)):
+        num = ord(Secret[i])
+        num = (num + Shift) % 128
+        new_ch = chr(num)
+        Final += new_ch
+    return Final
+
+Origin = input("Enter Message:")
+Moved = int(input("How many letters do you want it shifted by?: "))
+#sphinx of black quartz, judge my vow
+
+print(Cipher(Origin,Moved))
+
+# print(Cipher(Cipher(Origin,Moved),-Moved))
