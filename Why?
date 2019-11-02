@@ -1,0 +1,43 @@
+import turtle
+import random
+
+turtle.bgcolor("black")
+
+move = random.randint(1,500)
+turn = random.randint(20,180)
+
+qwe = turtle.Turtle()
+qwe.color("white")
+qwe.speed(0)
+
+endthis = turtle.Turtle()
+endthis.color("white")
+endthis.speed(0)
+
+sendhelp = turtle.Turtle()
+sendhelp.color("dark gray")
+sendhelp.speed(0)
+
+
+
+qwe.shape("turtle")
+sendhelp.shape("turtle")
+endthis.shape("turtle")
+
+
+sendhelp.backward(move%2)
+endthis.backward(move%2)
+while True:
+    sendhelp.shapesize(stretch_wid=random.randint(1,10))
+    endthis.shapesize(stretch_wid=random.randint(1,10))
+    sendhelp.shapesize(stretch_len=random.randint(1,20))
+    endthis.shapesize(stretch_len=random.randint(1,20))
+    sendhelp.forward(move)
+    endthis.forward(move)
+    sendhelp.left(turn)
+    endthis.right(turn)
+    if abs(sendhelp.pos()) < 1:
+        break
+sendhelp.hideturtle()
+endthis.hideturtle()
+turtle.done()
