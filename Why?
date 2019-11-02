@@ -10,6 +10,7 @@ qwe = turtle.Turtle()
 qwe.color("white")
 qwe.speed(0)
 
+
 endthis = turtle.Turtle()
 endthis.color("white")
 endthis.speed(0)
@@ -18,15 +19,14 @@ sendhelp = turtle.Turtle()
 sendhelp.color("dark gray")
 sendhelp.speed(0)
 
-
-
 qwe.shape("turtle")
 sendhelp.shape("turtle")
 endthis.shape("turtle")
 
-
+qwe.backward(move%2)
 sendhelp.backward(move%2)
 endthis.backward(move%2)
+
 while True:
     sendhelp.shapesize(stretch_wid=random.randint(1,10))
     endthis.shapesize(stretch_wid=random.randint(1,10))
@@ -34,7 +34,9 @@ while True:
     endthis.shapesize(stretch_len=random.randint(1,20))
     sendhelp.forward(move)
     endthis.forward(move)
+    qwe.forward(move)
     sendhelp.left(turn)
+    qwe.
     endthis.right(turn)
     if abs(sendhelp.pos()) < 1:
         break
