@@ -1,45 +1,210 @@
 import turtle
 import random
 
+small = 0
+normal = 0
+big = 0
+
+Hide = "on"
+
+
 turtle.bgcolor("black")
 
-move = random.randint(1,500)
-turn = random.randint(20,180)
 
-qwe = turtle.Turtle()
-qwe.color("white")
-qwe.speed(0)
+turn = random.randint(20,120)
+
+if turn > 100:
+    lenght = random.randint(50,180)
+else:
+    lenght = random.randint(100,300)
 
 
-endthis = turtle.Turtle()
-endthis.color("white")
-endthis.speed(0)
+if lenght > 250:
+    maxi = 4
+elif lenght < 250:
+    maxi = 1
 
-sendhelp = turtle.Turtle()
-sendhelp.color("dark gray")
-sendhelp.speed(0)
 
-qwe.shape("turtle")
-sendhelp.shape("turtle")
-endthis.shape("turtle")
+big = random.randint(1,maxi)
 
-qwe.backward(move%2)
-sendhelp.backward(move%2)
-endthis.backward(move%2)
+if normal = 1:
+    BtmLft = turtle.Turtle()
+    BtmLft.shape("turtle")
+    BtmLft.color("dark gray", "pink")
+    BtmLft.speed(0)
+    BtmLft.penup()
+    BtmLft.pensize(big)
+    
+    TpLft = turtle.Turtle()
+    TpLft.shape("turtle")
+    TpLft.color("light blue", "white")
+    TpLft.speed(0)
+    TpLft.penup()
+    TpLft.pensize(big)
+
+    TpRght = turtle.Turtle()
+    TpRght.shape("turtle")
+    TpRght.color("white", "light blue")
+    TpRght.speed(0)
+    TpRght.penup()
+    TpRght.pensize(big)
+
+    BtmRght = turtle.Turtle()
+    BtmRght.shape("turtle")
+    BtmRght.color("pink", "dark grey")
+    BtmRght.speed(0)
+    BtmRght.penup()
+    BtmRght.pensize(big)
+
+    BtmLft.left(90)
+    TpLft.right(90)
+    BtmRght.left(90)
+    TpRght.right(90)
+
+    BtmLft.pendown()
+    TpLft.pendown()
+    BtmRght.pendown()
+    TpRght.pendown()
+
+    while True:
+
+        BtmRght.forward(lenght)
+        BtmRght.left(turn)
+
+        TpLft.forward(lenght)
+        TpLft.left(turn)
+
+        TpRght.forward(lenght)
+        TpRght.right(turn)
+
+        BtmLft.forward(lenght)
+        BtmLft.right(turn)
+    
+if big = 1:
+    BtmBtmLft = turtle.Turtle()
+    BtmBtmLft.shape("turtle")
+    BtmBtmLft.color("pink")
+    BtmBtmLft.speed(0)
+    BtmBtmLft.penup()
+    BtmBtmLft.pensize(big)
+
+    TpTpLft = turtle.Turtle()
+    TpTpLft.shape("turtle")
+    TpTpLft.color("white")
+    TpTpLft.speed(0)
+    TpTpLft.penup()
+    TpTpLft.pensize(big)
+
+    TpTpRght = turtle.Turtle()
+    TpTpRght.shape("turtle")
+    TpTpRght.color("light blue")
+    TpTpRght.speed(0)
+    TpTpRght.penup()
+    TpTpRght.pensize(big)
+
+    BtmBtmRght = turtle.Turtle()
+    BtmBtmRght.shape("turtle")
+    BtmBtmRght.color("dark grey")
+    BtmBtmRght.speed(0)
+    BtmBtmRght.penup()
+    BtmBtmRght.pensize(big)
+
+    BtmBtmLft.left(90)
+    TpTpLft.right(90)
+    BtmBtmRght.left(90)
+    TpTpRght.right(90)
+
+    BtmBtmLft.pendown()
+    TpTpLft.pendown()
+    BtmBtmRght.pendown()
+    TpTpRght.pendown()
+
+if small = 1:
+    BL = turtle.Turtle()
+    BL.shape("turtle")
+    BL.color("dark gray", "pink")
+    BL.speed(0)
+    BL.penup()
+    BL.pensize(big)
+    
+    TL = turtle.Turtle()
+    TL.shape("turtle")
+    TL.color("light blue", "white")
+    TL.speed(0)
+    TL.penup()
+    TL.pensize(big)
+
+    TR = turtle.Turtle()
+    TR.shape("turtle")
+    TR.color("white", "light blue")
+    TR.speed(0)
+    TR.penup()
+    TR.pensize(big)
+
+    BR = turtle.Turtle()
+    BR.shape("turtle")
+    BR.color("pink", "dark grey")
+    BR.speed(0)
+    BR.penup()
+    BR.pensize(big)
+
+    BL.pendown()
+    TL.pendown()
+    BR.pendown()
+    TR.pendown()
+
+    BL.left(90)
+    TL.right(90)
+    BR.left(90)
+    TR.right(90)
+
+
+
+
 
 while True:
-    sendhelp.shapesize(stretch_wid=random.randint(1,10))
-    endthis.shapesize(stretch_wid=random.randint(1,10))
-    sendhelp.shapesize(stretch_len=random.randint(1,20))
-    endthis.shapesize(stretch_len=random.randint(1,20))
-    sendhelp.forward(move)
-    endthis.forward(move)
-    qwe.forward(move)
-    sendhelp.left(turn)
-    qwe.
-    endthis.right(turn)
-    if abs(sendhelp.pos()) < 1:
+    
+    BtmBtmRght.forward(lenght*1.25)
+    BtmBtmRght.left(turn)
+
+    TpTpLft.forward(lenght*1.25)
+    TpTpLft.left(turn)
+
+    TpTpRght.forward(lenght*1.25)
+    TpTpRght.right(turn)
+
+    BtmBtmLft.forward(lenght*1.25)
+    BtmBtmLft.right(turn)
+
+    BR.forward(lenght*.75)
+    BR.left(turn)
+
+    TL.forward(lenght*.75)
+    TL.left(turn)
+
+    TR.forward(lenght*.75)
+    TR.right(turn)
+
+    BL.forward(lenght*.75)
+    BL.right(turn)
+
+    if abs(BtmRght.pos()) < random.randint(1,5):
+
         break
-sendhelp.hideturtle()
-endthis.hideturtle()
+
+if Hide == "on":
+    BtmRght.hideturtle()
+    TpRght.hideturtle()
+    BtmLft.hideturtle()
+    TpLft.hideturtle()
+    BtmBtmRght.hideturtle()
+    TpTpRght.hideturtle()
+    BtmBtmLft.hideturtle()
+    TpTpLft.hideturtle()
+    BR.hideturtle()
+    TR.hideturtle()
+    BL.hideturtle()
+    TL.hideturtle()
+
+
 turtle.done()
