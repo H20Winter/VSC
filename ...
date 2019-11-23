@@ -1,210 +1,401 @@
 import turtle
 import random
 
-small = 0
-normal = 0
-big = 0
 
 Hide = "on"
+
+# Shpe = random.randint(1,10)
+Shpe = 10
 
 
 turtle.bgcolor("black")
 
+# Rnad = input("Random numbers on? y or n:")
+Rnad = "y"
 
-turn = random.randint(20,120)
+if Rnad == "n":
+    lenght = int(input("How long should each line be?: "))
+    turn = int(input("How many degrees should the turtles turn?: "))
+    big = int(input("How thick should the lines be?: "))
 
-if turn > 100:
-    lenght = random.randint(50,180)
-else:
-    lenght = random.randint(100,300)
+if Rnad == "y":
+    turn = random.randint(30,120)
+
+    if turn > 100:
+        lenght = random.randint(50,180)
+    else:
+        lenght = random.randint(100,280)
 
 
-if lenght > 250:
-    maxi = 4
-elif lenght < 250:
-    maxi = 1
+    if lenght > 250:
+        maxi = random.randint(1,2)
+    elif lenght < 250:
+        maxi = 1
 
+    big = random.randint(1,maxi)
 
-big = random.randint(1,maxi)
-
-if normal = 1:
-    BtmLft = turtle.Turtle()
-    BtmLft.shape("turtle")
-    BtmLft.color("dark gray", "pink")
-    BtmLft.speed(0)
-    BtmLft.penup()
-    BtmLft.pensize(big)
+BL = turtle.Turtle()
+BL.shape("turtle")
+BL.color("dark gray", "pink")
+BL.speed(0)
+BL.penup()
+BL.pensize(big)
     
-    TpLft = turtle.Turtle()
-    TpLft.shape("turtle")
-    TpLft.color("light blue", "white")
-    TpLft.speed(0)
-    TpLft.penup()
-    TpLft.pensize(big)
+TL = turtle.Turtle()
+TL.shape("turtle")
+TL.color("light blue", "white")
+TL.speed(0)
+TL.penup()
+TL.pensize(big)
 
-    TpRght = turtle.Turtle()
-    TpRght.shape("turtle")
-    TpRght.color("white", "light blue")
-    TpRght.speed(0)
-    TpRght.penup()
-    TpRght.pensize(big)
+TR = turtle.Turtle()
+TR.shape("turtle")
+TR.color("white", "light blue")
+TR.speed(0)
+TR.penup()
+TR.pensize(big)
 
-    BtmRght = turtle.Turtle()
-    BtmRght.shape("turtle")
-    BtmRght.color("pink", "dark grey")
-    BtmRght.speed(0)
-    BtmRght.penup()
-    BtmRght.pensize(big)
+BR = turtle.Turtle()
+BR.shape("turtle")
+BR.color("pink", "dark grey")
+BR.speed(0)
+BR.penup()
+BR.pensize(big)
 
-    BtmLft.left(90)
-    TpLft.right(90)
-    BtmRght.left(90)
-    TpRght.right(90)
+BL.left(90)
 
-    BtmLft.pendown()
-    TpLft.pendown()
-    BtmRght.pendown()
-    TpRght.pendown()
+TL.right(90)
 
+BR.left(90)
+
+TR.right(90)
+
+BL.pendown()
+TL.pendown()
+BR.pendown()
+TR.pendown()
+
+if Shpe == 1:
     while True:
+        BR.forward(lenght)
+        BR.left(turn)
+        BR.forward(lenght*2)
+        BR.left(turn)
 
-        BtmRght.forward(lenght)
-        BtmRght.left(turn)
+        TL.forward(lenght)
+        TL.left(turn)
+        TL.forward(lenght*2)
+        TL.left(turn)
 
-        TpLft.forward(lenght)
-        TpLft.left(turn)
+        TR.forward(lenght)
+        TR.right(turn)
+        TR.forward(lenght*2)
+        TR.right(turn)
 
-        TpRght.forward(lenght)
-        TpRght.right(turn)
-
-        BtmLft.forward(lenght)
-        BtmLft.right(turn)
+        BL.forward(lenght)
+        BL.right(turn)
+        BL.forward(lenght*2)
+        BL.right(turn)
     
-if big = 1:
-    BtmBtmLft = turtle.Turtle()
-    BtmBtmLft.shape("turtle")
-    BtmBtmLft.color("pink")
-    BtmBtmLft.speed(0)
-    BtmBtmLft.penup()
-    BtmBtmLft.pensize(big)
+        if abs(BR.pos()) < random.randint(1,5):
+            break
 
-    TpTpLft = turtle.Turtle()
-    TpTpLft.shape("turtle")
-    TpTpLft.color("white")
-    TpTpLft.speed(0)
-    TpTpLft.penup()
-    TpTpLft.pensize(big)
+if Shpe == 2:
+    while True:
+        
+        BR.forward(lenght)
+        BR.left(turn)
 
-    TpTpRght = turtle.Turtle()
-    TpTpRght.shape("turtle")
-    TpTpRght.color("light blue")
-    TpTpRght.speed(0)
-    TpTpRght.penup()
-    TpTpRght.pensize(big)
+        TL.forward(lenght)
+        TL.left(turn)
 
-    BtmBtmRght = turtle.Turtle()
-    BtmBtmRght.shape("turtle")
-    BtmBtmRght.color("dark grey")
-    BtmBtmRght.speed(0)
-    BtmBtmRght.penup()
-    BtmBtmRght.pensize(big)
+        TR.forward(lenght)
+        TR.right(turn)
 
-    BtmBtmLft.left(90)
-    TpTpLft.right(90)
-    BtmBtmRght.left(90)
-    TpTpRght.right(90)
-
-    BtmBtmLft.pendown()
-    TpTpLft.pendown()
-    BtmBtmRght.pendown()
-    TpTpRght.pendown()
-
-if small = 1:
-    BL = turtle.Turtle()
-    BL.shape("turtle")
-    BL.color("dark gray", "pink")
-    BL.speed(0)
-    BL.penup()
-    BL.pensize(big)
+        BL.forward(lenght)
+        BL.right(turn)
     
-    TL = turtle.Turtle()
-    TL.shape("turtle")
-    TL.color("light blue", "white")
-    TL.speed(0)
-    TL.penup()
-    TL.pensize(big)
+        if abs(BR.pos()) < random.randint(1,5):
+            break
 
-    TR = turtle.Turtle()
-    TR.shape("turtle")
-    TR.color("white", "light blue")
-    TR.speed(0)
-    TR.penup()
-    TR.pensize(big)
+if Shpe == 3:
+    while True:
+        
+        BR.forward(lenght)
+        BR.left(turn)
+        BR.forward(lenght)
+        BR.left(turn*2)
 
-    BR = turtle.Turtle()
-    BR.shape("turtle")
-    BR.color("pink", "dark grey")
-    BR.speed(0)
-    BR.penup()
-    BR.pensize(big)
+        TL.forward(lenght)
+        TL.left(turn)
+        TL.forward(lenght)
+        TL.left(turn*2)
 
-    BL.pendown()
-    TL.pendown()
-    BR.pendown()
-    TR.pendown()
+        TR.forward(lenght)
+        TR.right(turn)
+        TR.forward(lenght)
+        TR.right(turn*2)
 
-    BL.left(90)
-    TL.right(90)
-    BR.left(90)
-    TR.right(90)
-
-
-
-
-
-while True:
+        BL.forward(lenght)
+        BL.right(turn)
+        BL.forward(lenght)
+        BL.right(turn*2)
     
-    BtmBtmRght.forward(lenght*1.25)
-    BtmBtmRght.left(turn)
+        if abs(BR.pos()) < random.randint(1,5):
+            break
 
-    TpTpLft.forward(lenght*1.25)
-    TpTpLft.left(turn)
 
-    TpTpRght.forward(lenght*1.25)
-    TpTpRght.right(turn)
+    
+if Shpe == 4:
+    while True:
+        
+        BR.forward(lenght/2)
+        BR.right(turn/2)
+        BR.forward(lenght*2)
+        BR.left(turn*2)
 
-    BtmBtmLft.forward(lenght*1.25)
-    BtmBtmLft.right(turn)
+        TL.forward(lenght/2)
+        TL.right(turn/2)
+        TL.forward(lenght*2)
+        TL.left(turn*2)
 
-    BR.forward(lenght*.75)
-    BR.left(turn)
+        TR.forward(lenght/2)
+        TR.left(turn/2)
+        TR.forward(lenght*2)
+        TR.right(turn*2)
 
-    TL.forward(lenght*.75)
-    TL.left(turn)
+        BL.forward(lenght/2)
+        BL.left(turn/2)
+        BL.forward(lenght*2)
+        BL.right(turn*2)
+    
+        if abs(BR.pos()) < random.randint(1,5):
+            break
 
-    TR.forward(lenght*.75)
-    TR.right(turn)
+if Shpe == 5:
+    while True:
+        
+        BR.forward(lenght/2)
+        BR.right(turn/2)
+        BR.forward(lenght*2)
+        BR.left(turn*3)
 
-    BL.forward(lenght*.75)
-    BL.right(turn)
+        TL.forward(lenght/2)
+        TL.right(turn/2)
+        TL.forward(lenght*2)
+        TL.left(turn*3)
 
-    if abs(BtmRght.pos()) < random.randint(1,5):
+        TR.forward(lenght/2)
+        TR.left(turn/2)
+        TR.forward(lenght*2)
+        TR.right(turn*3)
 
-        break
+        BL.forward(lenght/2)
+        BL.left(turn/2)
+        BL.forward(lenght*2)
+        BL.right(turn*3)
+    
+        if abs(BR.pos()) < random.randint(1,5):
+            break
+
+if Shpe == 6:
+    while True:
+        
+        BR.forward(lenght/3)
+        BR.right(turn/3)
+        BR.forward(lenght*3)
+        BR.left(turn*2)
+
+        TL.forward(lenght/3)
+        TL.right(turn/3)
+        TL.forward(lenght*3)
+        TL.left(turn*2)
+
+        TR.forward(lenght/3)
+        TR.left(turn/3)
+        TR.forward(lenght*3)
+        TR.right(turn*2)
+
+        BL.forward(lenght/3)
+        BL.left(turn/3)
+        BL.forward(lenght*3)
+        BL.right(turn*2)
+
+        if abs(BR.pos()) < random.randint(1,5):
+            break
+
+if Shpe == 7:
+    while True:
+        
+        BR.forward(lenght/3)
+        BR.right(turn/lenght)
+        BR.forward(lenght*3)
+        BR.left(turn*lenght)
+
+        TL.forward(lenght/3)
+        TL.right(turn/lenght)
+        TL.forward(lenght*3)
+        TL.left(turn*lenght)
+
+        TR.forward(lenght/3)
+        TR.left(turn/lenght)
+        TR.forward(lenght*3)
+        TR.right(turn*lenght)
+
+        BL.forward(lenght/3)
+        BL.left(turn/lenght)
+        BL.forward(lenght*3)
+        BL.right(turn*lenght)
+
+        if abs(BR.pos()) < random.randint(1,5):
+            break
+
+
+
+
+
+
+        if abs(BR.pos()) < random.randint(1,5):
+            break
+
+if Shpe == 8:
+    while True:
+        
+        BR.forward(lenght/2)
+        BR.right(turn/3)
+        BR.forward(lenght)
+        BR.left(turn*2)
+        BR.forward(lenght/2)
+        BR.right(turn/2)
+        BR.forward(lenght*2)
+        BR.left(turn)
+
+
+        TL.forward(lenght/2)
+        TL.right(turn/3)
+        TL.forward(lenght)
+        TL.left(turn*2)
+        TL.forward(lenght/2)
+        TL.right(turn/2)
+        TL.forward(lenght*2)
+        TL.left(turn)
+
+
+        TR.forward(lenght/2)
+        TR.left(turn/3)
+        TR.forward(lenght)
+        TR.right(turn*2)
+        TR.forward(lenght/2)
+        TR.left(turn/2)
+        TR.forward(lenght*2)
+        TR.right(turn)
+
+        BL.forward(lenght/2)
+        BL.left(turn/3)
+        BL.forward(lenght)
+        BL.right(turn*2)
+        BL.forward(lenght/2)
+        BL.left(turn/2)
+        BL.forward(lenght*2)
+        BL.right(turn)
+
+
+        if abs(BR.pos()) < random.randint(1,5):
+            break
+
+if Shpe == 9:
+    while True:
+        
+        BR.forward(lenght/2)
+        BR.left(turn/3)
+        BR.forward(lenght)
+        BR.left(turn*2)
+        BR.forward(lenght/2)
+        BR.right(turn/2)
+        BR.forward(lenght*2)
+        BR.right(turn)
+
+
+        TL.forward(lenght/2)
+        TL.left(turn/3)
+        TL.forward(lenght)
+        TL.left(turn*2)
+        TL.forward(lenght/2)
+        TL.right(turn/2)
+        TL.forward(lenght*2)
+        TL.right(turn)
+
+
+        TR.forward(lenght/2)
+        TR.right(turn/3)
+        TR.forward(lenght)
+        TR.right(turn*2)
+        TR.forward(lenght/2)
+        TR.left(turn/2)
+        TR.forward(lenght*2)
+        TR.left(turn)
+
+        BL.forward(lenght/2)
+        BL.right(turn/3)
+        BL.forward(lenght)
+        BL.right(turn*2)
+        BL.forward(lenght/2)
+        BL.left(turn/2)
+        BL.forward(lenght*2)
+        BL.left(turn)
+
+
+        if abs(BR.pos()) < random.randint(1,5):
+            break
+
+if Shpe == 10:
+    while True:
+        
+        BR.forward(lenght/2)
+        BR.left(turn/3)
+        BR.backward(lenght)
+        BR.left(turn*2)
+        BR.forward(lenght/2)
+        BR.right(turn/4)
+        BR.backward(lenght*2)
+        BR.right(turn)
+
+
+        TL.forward(lenght/2)
+        TL.left(turn/3)
+        TL.backward(lenght)
+        TL.left(turn*2)
+        TL.forward(lenght/2)
+        TL.right(turn/4)
+        TL.backward(lenght*2)
+        TL.right(turn)
+
+
+        TR.forward(lenght/2)
+        TR.right(turn/3)
+        TR.backward(lenght)
+        TR.right(turn*2)
+        TR.forward(lenght/2)
+        TR.left(turn/4)
+        TR.backward(lenght*2)
+        TR.left(turn)
+
+        BL.forward(lenght/2)
+        BL.right(turn/3)
+        BL.backward(lenght)
+        BL.right(turn*2)
+        BL.forward(lenght/2)
+        BL.left(turn/4)
+        BL.backward(lenght*2)
+        BL.left(turn)
+
+
+        if abs(BR.pos()) < random.randint(1,5):
+            break
 
 if Hide == "on":
-    BtmRght.hideturtle()
-    TpRght.hideturtle()
-    BtmLft.hideturtle()
-    TpLft.hideturtle()
-    BtmBtmRght.hideturtle()
-    TpTpRght.hideturtle()
-    BtmBtmLft.hideturtle()
-    TpTpLft.hideturtle()
     BR.hideturtle()
     TR.hideturtle()
     BL.hideturtle()
     TL.hideturtle()
-
-
 turtle.done()
