@@ -4,14 +4,14 @@ import random
 
 Hide = "on"
 
-# Shpe = random.randint(1,10)
-Shpe = 10
+Shpe = random.randint(1,11)
+# Shpe = 11
 
 
 turtle.bgcolor("black")
 
-# Rnad = input("Random numbers on? y or n:")
-Rnad = "y"
+Rnad = input("Random numbers on? y or n:")
+# Rnad = "y"
 
 if Rnad == "n":
     lenght = int(input("How long should each line be?: "))
@@ -388,6 +388,51 @@ if Shpe == 10:
         BL.left(turn/4)
         BL.backward(lenght*2)
         BL.left(turn)
+
+
+        if abs(BR.pos()) < random.randint(1,5):
+            break
+
+if Shpe == 11:
+    while True:
+        
+        BR.forward(lenght/2)
+        BR.right(turn/3)
+        BR.backward(lenght)
+        BR.left(turn*2)
+        BR.forward(lenght/2)
+        BR.right(turn/4)
+        BR.backward(lenght*2)
+        BR.left(turn)
+
+
+        TL.forward(lenght/2)
+        TL.right(turn/3)
+        TL.backward(lenght)
+        TL.left(turn*2)
+        TL.forward(lenght/2)
+        TL.right(turn/4)
+        TL.backward(lenght*2)
+        TL.left(turn)
+
+
+        TR.forward(lenght/2)
+        TR.left(turn/3)
+        TR.backward(lenght)
+        TR.right(turn*2)
+        TR.forward(lenght/2)
+        TR.left(turn/4)
+        TR.backward(lenght*2)
+        TR.right(turn)
+
+        BL.forward(lenght/2)
+        BL.left(turn/3)
+        BL.backward(lenght)
+        BL.right(turn*2)
+        BL.forward(lenght/2)
+        BL.left(turn/4)
+        BL.backward(lenght*2)
+        BL.right(turn)
 
 
         if abs(BR.pos()) < random.randint(1,5):
