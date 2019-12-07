@@ -3,28 +3,14 @@ import turtle
 import random
 
 
-
-
 Hide = "on"
 
-
-
 Shpe = random.randint(1,14)
-
-#Shpe = 15
-
-
-
 
 
 turtle.bgcolor("black")
 
-
-
 Rnad = input("Random numbers on? y or n:")
-
-#Rnad = "y"
-
 
 
 if Rnad == "n":
@@ -34,7 +20,6 @@ if Rnad == "n":
     turn = int(input("How many degrees should the turtles turn?: "))
 
     big = int(input("How thick should the lines be?: "))
-
 
 if Rnad == "y":
 
@@ -67,87 +52,48 @@ if Rnad == "y":
     big = random.randint(1,maxi)
 
 
-
 BL = turtle.Turtle()
-
 BL.shape("turtle")
-
 BL.color("dark gray", "pink")
-
 BL.speed(0)
-
 BL.penup()
-
 BL.pensize(big)
 
     
-
 TL = turtle.Turtle()
-
 TL.shape("turtle")
-
 TL.color("light blue", "white")
-
 TL.speed(0)
-
 TL.penup()
-
 TL.pensize(big)
 
 
-
 TR = turtle.Turtle()
-
 TR.shape("turtle")
-
 TR.color("white", "light blue")
-
 TR.speed(0)
-
 TR.penup()
-
 TR.pensize(big)
 
 
-
 BR = turtle.Turtle()
-
 BR.shape("turtle")
-
 BR.color("pink", "dark grey")
-
 BR.speed(0)
-
-BR.penup()
-
+BR.penup()\
 BR.pensize(big)
 
 
-
 BL.left(90)
-
-
-
 TL.right(90)
-
-
-
 BR.left(90)
-
-
-
 TR.right(90)
 
 
-
 BL.pendown()
-
 TL.pendown()
-
 BR.pendown()
-
 TR.pendown()
-
 
 
 if Shpe == 1:
@@ -1008,7 +954,6 @@ if Shpe == 15:
         if abs(BR.pos()) < random.randint(1,5):
 
             break
-
 
 
 if Hide == "on":
