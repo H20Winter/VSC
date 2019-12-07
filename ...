@@ -5,7 +5,7 @@ import random
 
 Hide = "on"
 
-Shpe = random.randint(1,14)
+Shpe = random.randint(1,16)
 
 
 turtle.bgcolor("black")
@@ -773,9 +773,7 @@ if Shpe == 13:
 
         BR.forward(lenght)
 
-        BR.left(turn)
-
-        BR.left(turn)
+        BR.left(turn*2)
 
         BR.backward(lenght)
 
@@ -788,9 +786,7 @@ if Shpe == 13:
 
         TL.forward(lenght)
 
-        TL.left(turn)
-
-        TL.left(turn)
+        TL.left(turn*2)
 
         TL.backward(lenght)
 
@@ -803,9 +799,7 @@ if Shpe == 13:
 
         TR.forward(lenght)
 
-        TR.right(turn)
-
-        TR.right(turn)
+        TR.right(turn*2)
 
         TR.backward(lenght)
 
@@ -818,9 +812,7 @@ if Shpe == 13:
 
         BL.forward(lenght)
 
-        BL.right(turn)
-
-        BL.right(turn)
+        BL.right(turn*2)
 
         BL.backward(lenght)
 
@@ -954,6 +946,51 @@ if Shpe == 15:
         if abs(BR.pos()) < random.randint(1,5):
 
             break
+
+if Shpe == 16:
+
+    while True:
+
+        BR.forward(lenght)
+
+        BR.left(turn)
+
+        BR.forward(lenght)
+
+        BR.right(turn*2)
+
+
+        TL.forward(lenght)
+
+        TL.left(turn)
+
+        TL.forward(lenght)
+
+        TL.right(turn*2)
+
+
+        TR.forward(lenght)
+
+        TR.right(turn)
+
+        TR.forward(lenght)
+
+        TR.left(turn*2)
+
+
+        BL.forward(lenght)
+
+        BL.right(turn)
+
+        BL.forward(lenght)
+
+        BL.left(turn*2)
+
+    
+        if abs(BR.pos()) < random.randint(1,5):
+
+            break
+
 
 
 if Hide == "on":
