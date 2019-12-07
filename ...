@@ -80,7 +80,7 @@ BR = turtle.Turtle()
 BR.shape("turtle")
 BR.color("pink", "dark grey")
 BR.speed(0)
-BR.penup()\
+BR.penup()
 BR.pensize(big)
 
 
